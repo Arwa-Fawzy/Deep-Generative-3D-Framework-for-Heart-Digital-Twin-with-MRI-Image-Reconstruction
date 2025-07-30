@@ -1,12 +1,16 @@
-# 🫀 3dgan: High-Fidelity 3D Cardiac Image Synthesis Using GANs
+# 3D GAN: Generating Realistic Heart Volumes for Patient Digital Twin
 
 ## Overview
 
-The generation of high-quality 3D cardiac images is critical for applications such as **digital twins**, **clinical simulations**, **training machine learning models**, and **diagnostic augmentation**. However, this task is often hindered by privacy constraints and the limited availability of publicly labeled medical imaging datasets.
+The generation of **high-quality 3D cardiac images** is hindered by **privacy constraints** and the **limited availability of publicly labeled medical imaging datasets**. These images are essential for **model training**, **digital twins**, **simulation**, and **diagnostic augmentation**.
 
-**3dgan** addresses these challenges by implementing a **3D Generative Adversarial Network (GAN)** framework capable of synthesizing realistic volumetric heart models. The model leverages a large collection of **11,000 unlabeled normal cardiac MRI scans** to learn intricate spatial features of the heart anatomy. Using a **StyleGAN2-based teacher model**, we generate a synthetic dataset of **10,000 high-fidelity 3D cardiac images**, which serve as training data for a smaller, efficient student model through a knowledge distillation process.
+This work proposes an **end-to-end workflow** that **distills a complex StyleGAN model** into a **lightweight student model**, designed to generate **3D cardiac MRI scans** with **reduced computational complexity**.
 
-This work marks the **first step toward building a personalized digital twin of the heart** by enabling the generation of **tailored heart dimensions** based on individual patient anatomy. This foundation paves the way for future clinical applications, including patient-specific diagnostics, simulation, and disease modeling.
+These heart scan outputs are then processed through **segmentation** and **YOLO-based detection models** to extract **accurate anatomical dimensions**, which are used as input for **open-source 3D computer graphics** to generate a **personalized heart design** for each patient.
+
+To handle **noise and missing parts** in some user-provided or edge-case inputs, a **GAN-based inpainting model** is implemented to reconstruct the incomplete heart structure.
+
+This **static 3D design** forms the foundation of **tailored digital twinning**, representing a key step toward simulating a **virtual software copy** of the heart’s **motion and disease progression in real time**.
 
 ---
 
