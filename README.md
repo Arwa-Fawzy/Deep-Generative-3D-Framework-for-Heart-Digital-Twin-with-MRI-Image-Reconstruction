@@ -1,5 +1,4 @@
-# 3D GAN: Generating Realistic Heart Volumes for Patient Digital Twin
-
+# Deep Generative 3D Framework for Heart Digital Twin with MRI Image Reconstruction
 ## Overview
 
 The generation of **high-quality 3D cardiac images** is hindered by **privacy constraints** and the **limited availability of publicly labeled medical imaging datasets**. These images are essential for **model training**, **digital twins**, **simulation**, and **diagnostic augmentation**.
